@@ -1,3 +1,11 @@
 spring:
   application:
     name: taskmanagement
+  profiles:
+    active: dev
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.example.taskmanagement.domain.model
+  configuration:
+    map-underscore-to-camel-case: true
