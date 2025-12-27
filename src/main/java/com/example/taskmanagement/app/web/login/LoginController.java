@@ -21,4 +21,9 @@ public class LoginController {
     public String getTop() {
         return "top";
     }
+
+    @PostMapping("/logout")
+    public String postLogout() {
+        return "redirect:/login";
+    }
 }
