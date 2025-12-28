@@ -17,11 +17,6 @@ public class LoginController {
         return "login";
     }
 
-    @GetMapping("/top")
-    public String getTop() {
-        return "top";
-    }
-
     @PostMapping("/logout")
     public String postLogout() {
         return "redirect:/login";
