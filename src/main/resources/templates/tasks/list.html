@@ -6,7 +6,7 @@
   <title>タスク一覧</title>
 </head>
 <body>
-<div layout:fragment="content">
+<div layout:fragment="content" class="container">
 
   <div class="d-flex justify-content-between align-items-center my-5">
     <h3>タスク一覧</h3>
@@ -36,9 +36,7 @@
       <td th:text="${task.assignee}">u001</td>
       <td>
         <span class="badge"
-              th:classappend="${task.status.name() == 'TODO'  ? ' bg-secondary' :
-                       task.status.name() == 'DOING' ? ' bg-warning'   :
-                                                        ' bg-success'}"
+              th:classappend="${task.status.cssClass}"
               th:text="${task.status.label}">
         </span>
       </td>
